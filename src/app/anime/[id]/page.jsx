@@ -6,8 +6,8 @@ const Page = async({ params : { id } }) => {
     console.log(anime)
     return (
     <div>
-        <h1 className="text-3xl px-2 py-4 overflow-x-auto text-color-primary font-bold">{anime.data.title}</h1>
-        <div className="flex text-color-primary gap-3 px-2">
+        <h1 className="text-3xl px-2 py-4  text-color-primary font-bold">{anime.data.title}</h1>
+        <div className="flex text-color-primary gap-3 px-2 overflow-x-auto">
             <div className="border-2 rounded p-4">Score : {anime.data.score}</div>
             <div className="border-2 rounded p-4">Rank : {anime.data.rank}</div>
             <div className="border-2 rounded p-4">Episodes : {anime.data.episodes}</div>
