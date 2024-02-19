@@ -4,49 +4,48 @@ import Image from "next/image"
 
 const Page = async ({ params: { id } }) => {
     const anime = await getAnimeResponse(`anime/${id}`)
-    console.log(anime)
     return (
         <div>
-            <h1 className="text-3xl px-2 pt-4 overflow-x-auto text-color-dark font-bold">{anime.data.title} - {anime.data.year}</h1>
-            <div className="flex text-color-dark gap-3 px-2">
+            <h1 className="text-3xl px-2 pt-4  text-color-dark font-bold">{anime.data.title} - {anime.data.year}</h1>
+            <div className="flex text-color-dark gap-3 px-2 overflow-x-auto">
                 <div className="border-2 rounded flex flex-col items-center justify-center p-4">
-                    <div>
+                    <div className="font-bold">
                         Score
                     </div>
                     {anime.data.score}
                 </div>
                 <div className="border-2 rounded flex flex-col items-center justify-center p-4">
-                    <div>
+                    <div className="font-bold">
                         Episodes
                     </div>
                     {anime.data.episodes}
                 </div>
                 <div className="border-2 rounded flex flex-col items-center justify-center p-4">
-                    <div>
+                    <div className="font-bold">
                         Popularity
                     </div>
                     {anime.data.popularity}
                 </div>
                 <div className="border-2 rounded flex flex-col items-center justify-center p-4">
-                    <div>
+                    <div className="font-bold">
                         Members
                     </div>
                     {anime.data.members}
                 </div>
                 <div className="border-2 rounded flex flex-col items-center justify-center p-4">
-                    <div>
+                    <div className="font-bold">
                         Season
                     </div>
                     {anime.data.season}
                 </div>
                 <div className="border-2 rounded flex flex-col items-center justify-center p-4">
-                    <div>
+                    <div className="font-bold">
                         Duration
                     </div>
                     {anime.data.duration}
                 </div>
                 <div className="border-2 rounded flex flex-col items-center justify-center p-4">
-                    <div>
+                    <div className="font-bold">
                         Favorites
                     </div>
                     {anime.data.favorites}
