@@ -6,15 +6,15 @@ const gabarito = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Lar Movie",
-  description: "blablabla",
+  description: "Created By Gilar",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${gabarito.className} bg-color-dark`} suppressHydrationWarning={true} >   
-      <Navbar /> 
-      {children}
+      <body className={`${gabarito.className} bg-color-primary`} suppressHydrationWarning={true} >
+        <Navbar />
+        {children}
       </body>
     </html>
   );

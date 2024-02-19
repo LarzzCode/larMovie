@@ -1,4 +1,4 @@
-const Pagination = ({page, setPage}) => {
+const Pagination = ({ page, setPage, lastPage }) => {
 
   const scrollTop = () => {
     scrollTo({
@@ -8,23 +8,23 @@ const Pagination = ({page, setPage}) => {
   }
 
   const handleNextPage = () => {
-    setPage((prevState) => prevState+1)
+    setPage((prevState) => prevState + 1)
     scrollTop()
   }
   const handlePrevPage = () => {
-    setPage((prevState) => prevState-1)
+    setPage((prevState) => prevState - 1)
     scrollTop()
   }
 
-    return (
-      <div className="flex justify-center md:text-2xl items-center text-color-primary py-4 px-2 gap-4"> 
-        {page <= 1 ? null : 
-          <button onClick={handlePrevPage} className="transition-all hover:text-color-accent">Prev</button>
-        }
-        <p>{page}</p>
-        <button onClick={handleNextPage} className="transition-all hover:text-color-accent">Next</button>
-      </div>
-    )
-  }
-  
-  export default Pagination
+  return (
+    <div className="flex justify-center md:text-2xl items-center text-color-dark py-4 font-bold px-2 gap-4">
+      {page <= 1 ? null :
+        <button onClick={handlePrevPage} className="transition-all hover:text-color-accent">Prev</button>
+      }
+      <p>{page} of {lastPage} </p>
+      <button onClick={handleNextPage} className="transition-all hover:text-color-accent">Next</button>
+    </div>
+  )
+}
+
+export default Pagination
