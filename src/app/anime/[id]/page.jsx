@@ -6,7 +6,6 @@ const Page = async ({ params: { id } }) => {
     const anime = await getAnimeResponse(`anime/${id}`)
     console.log(anime)
     return (
-<<<<<<< HEAD
         <div>
             <h1 className="text-3xl px-2 pt-4 overflow-x-auto text-color-dark font-bold">{anime.data.title} - {anime.data.year}</h1>
             <div className="flex text-color-dark gap-3 px-2">
@@ -66,16 +65,6 @@ const Page = async ({ params: { id } }) => {
                 <VideoPlayer youtubeId={anime.data.trailer.youtube_id} />
             </div>
 
-=======
-    <div>
-        <h1 className="text-3xl px-2 py-4  text-color-primary font-bold">{anime.data.title}</h1>
-        <div className="flex text-color-primary gap-3 px-2 overflow-x-auto">
-            <div className="border-2 rounded p-4">Score : {anime.data.score}</div>
-            <div className="border-2 rounded p-4">Rank : {anime.data.rank}</div>
-            <div className="border-2 rounded p-4">Episodes : {anime.data.episodes}</div>
-            <div className="border-2 rounded p-4">Popularity : {anime.data.popularity}</div>
-            <div className="border-2 rounded p-4">Members : {anime.data.memebrs}</div>
->>>>>>> c0f4406378bbe615eb7e6eca1c222decaa176ada
         </div>
     )
 }

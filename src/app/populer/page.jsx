@@ -9,12 +9,12 @@ import { getAnimeResponse } from '../../libs/api-libs'
 const Page = async () => {
 
   const [page, setPage] = useState(1)
-  const [topAnime, setTopAnime] = useState([])
+  const [anime, setAnime] = useState([])
 
   const fetchData = async () => {
     const popularAnime = await getAnimeResponse("top/anime", `page=${page}`)
 
-    setTopAnime(popularAnime)
+    setAnime(popularAnime)
   }
 
   useEffect(() => {
@@ -26,8 +26,8 @@ const Page = async () => {
   return (
     <>
       <HeaderMenu title={`Anime Populer #${page}`} />
-      <AnimeList api={topAnime} />
-      <Pagination page={page} setPage={setPage} lastPage={topAnime.pagination?.last_visible_page} />
+      <AnimeList api={anime} />
+      <Pagination page={page} setPage={setPage} lastPage={anime.pagination?.last_visible_page} />
     </>
   )
 }
