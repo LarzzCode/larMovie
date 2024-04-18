@@ -4,7 +4,6 @@ import { useState } from "react"
 import YouTube from "react-youtube"
 
 
-
 const VideoPlayer = ({ youtubeId }) => {
   const [isOpen, setIsOpen] = useState(true)
 
@@ -13,8 +12,8 @@ const VideoPlayer = ({ youtubeId }) => {
   }
 
   const option = {
-    width: "300",
-    height: "250"
+    width: 300,
+    height: 300
   }
 
   const Player = () => {
@@ -24,8 +23,8 @@ const VideoPlayer = ({ youtubeId }) => {
           <XCircle size={32} />
         </button>
         <YouTube
-          title={`Lar Movie Mania`}
-          loading={`Wait Cuy`}
+          title={`LarMovieManiaDiSiniGenk`}
+          loading={`WaitCuy`}
           videoId={youtubeId}
           onReady={(event) => event.target.pauseVideo()}
           opts={option}
